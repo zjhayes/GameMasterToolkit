@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,11 +36,10 @@ public class getDiceRoll extends HttpServlet
 		String numberOfDice = request.getParameter("numberOfDice");
 		
 		DiceRoller dice = new DiceRoller(Integer.parseInt(numberOfSides), Integer.parseInt(numberOfDice));
-		dice.roll();
 		
-		PrintWriter writer = response.getWriter();
-		writer.println(dice.getPreviousRoll());
-		writer.close();
+		request.setAttribute("userDice", dice);
+		
+		getServletContext().getRequestDispatcher("/diceResults.jsp").forward(request,  response);
 	}
 
 }

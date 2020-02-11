@@ -5,38 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Roll Dice</title>
-<style>
-	body {
-	  background-color: linen;
-	  font-family: sans-serif;
-	}
-	
-	h1 {
-	  color: maroon;
-	  margin-left: 100px;
-	}
-	
-	form {
-		padding: 25px 50px 75px 100px;
-		margin-left: 10%;
-		margin-right: 30%;
-		border-style: inset;
-		border-collapse: separate;
-  		border-spacing: 15px;
-	}
-	
-	.button {
-		background-color: maroon;
-		border: none;
-		color: white;
-		padding: 15px 32px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 20px;
-	}
-	
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<h1>Roll Dice</h1>

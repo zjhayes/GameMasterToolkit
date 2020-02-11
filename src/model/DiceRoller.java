@@ -18,6 +18,7 @@ public class DiceRoller
 		super();
 		this.numberOfSides = numberOfSides;
 		this.numberOfDice = numberOfDice;
+		roll();
 	}
 	
 	public void roll()
