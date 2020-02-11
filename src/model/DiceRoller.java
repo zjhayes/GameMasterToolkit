@@ -7,6 +7,7 @@ public class DiceRoller
 	private int numberOfSides;
 	private int numberOfDice;
 	private int previousRoll;
+	private final int MINIMUM_ROLL = 1;
 	
 	public DiceRoller()
 	{
@@ -28,7 +29,7 @@ public class DiceRoller
 		
 		for(int i = 0; i < numberOfDice; i++)
 		{
-			rollTotal += rand.nextInt(numberOfSides);
+			rollTotal += rand.nextInt(numberOfSides) + MINIMUM_ROLL;
 		}
 		
 		setPreviousRoll(rollTotal);

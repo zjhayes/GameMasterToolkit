@@ -32,14 +32,23 @@ public class getDiceRoll extends HttpServlet
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		String numberOfSides = request.getParameter("diceType");
-		String numberOfDice = request.getParameter("numberOfDice");
+		try
+		{
+			String numberOfSides = request.getParameter("diceType");
+			String numberOfDice = request.getParameter("numberOfDice");
+			
+			DiceRoller dice = new DiceRoller(Integer.parseInt(numberOfSides), Integer.parseInt(numberOfDice));
+			
+			request.setAttribute("userDice", dice);
+			
+			getServletContext().getRequestDispatcher("/diceResults.jsp").forward(request,  response);
+		}
+		catch(Exception ex)
+		{
+			request.setAttribute("error", ex);
+			getServletContext().getRequestDispatcher("/error.jsp").forward(request,  response);
+		}
 		
-		DiceRoller dice = new DiceRoller(Integer.parseInt(numberOfSides), Integer.parseInt(numberOfDice));
-		
-		request.setAttribute("userDice", dice);
-		
-		getServletContext().getRequestDispatcher("/diceResults.jsp").forward(request,  response);
 	}
 
 }

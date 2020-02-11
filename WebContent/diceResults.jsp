@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h1>You rolled ${userDice.getPreviousRoll()} </h1>
-	<a href="rollDice.jsp">Roll Again</a>
-	<a href="index.html">Go Back Home</a>
+	<p><a href="rollDice.jsp">Roll Again</a></p>
+	<p><a href="index.html">Go Back Home</a></p>
 </body>
 </html>
