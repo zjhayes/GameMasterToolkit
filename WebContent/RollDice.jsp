@@ -10,8 +10,8 @@
 <body>
 	<h1>Roll Dice</h1>
 	<form action="getDiceRoll" method="post">
-		<label for="diceType">What kind of dice are you rolling?</label>
-		<select name="diceType">
+		<label for="diceTypeDropDown">What kind of dice are you rolling?</label>
+		<select id="diceTypeDropDown" name="diceType">
 			<option value="4">D4</option>
 			<option value="6">D6</option>
 			<option value="8">D8</option>
