@@ -24,7 +24,6 @@ public class getDiceRoll extends HttpServlet
     public getDiceRoll() 
     {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
